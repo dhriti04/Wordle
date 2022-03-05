@@ -2,11 +2,13 @@
     <string name="app_name">Wordle</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
+    <string name="first_fragment_label">Home Screen</string>
+    <string name="second_fragment_label">Wordle</string>
     <string name="start">Start Game</string>
     <string name="home_page">Home Page</string>
 
     <string name="hello">Hello, welcome to Wordle!</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="game_fragment_label">Game</string>
+    <string name="custom_game_fragment_label">Custom Game</string>
 </resources>

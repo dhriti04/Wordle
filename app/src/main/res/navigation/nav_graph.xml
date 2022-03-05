@@ -3,26 +3,39 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/InitialFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example.wordle.FirstFragment"
+        android:id="@+id/InitialFragment"
+        android:name="com.example.wordle.InitialFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        tools:layout="@layout/fragment_initial">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_InitialFragment_to_GameFragment"
+            app:destination="@id/GameFragment" />
+        <action
+            android:id="@+id/action_InitialFragment_to_CustomGameFragment"
+            app:destination="@id/CustomGameFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.wordle.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        android:id="@+id/GameFragment"
+        android:name="com.example.wordle.GameFragment"
+        android:label="@string/game_fragment_label"
+        tools:layout="@layout/fragment_game">
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_GameFragment_to_InitialFragment"
+            app:destination="@id/InitialFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/CustomGameFragment"
+        android:name="com.example.wordle.CustomGameFragment"
+        android:label="@string/custom_game_fragment_label"
+        tools:layout="@layout/fragment_game_custom">
+
+        <action
+            android:id="@+id/action_CustomGameFragment_to_InitialFragment"
+            app:destination="@id/InitialFragment" />
     </fragment>
 </navigation>
